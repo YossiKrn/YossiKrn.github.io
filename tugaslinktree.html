@@ -148,7 +148,6 @@
             justify-content: center;
             position: relative;
             transition: 0.2s;
-            text-decoration: none !important;
         }
 
         .link-item:hover {
@@ -204,7 +203,6 @@
             display: flex;
             justify-content: center;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            text-decoration: none !important;
         }
 
         .footer-nav {
@@ -218,7 +216,6 @@
 
         .footer-nav a {
             color: #FFFFFF;
-            text-decoration: none;
         }
 
         .footer-nav span {
@@ -226,6 +223,35 @@
         }
     </style>
 </head>
+<script>
+    function showme() {
+        alert("Hallo Selamat Siang");
+        Swal.fire({
+  title: "Hallo",
+  text: "Selamat Siang",
+  icon: "success"
+});
+        console.log("Ini baris 229, sudah sampai disini");
+        a = 18 + 10;
+        console.log("Hasil penjumlahan :" + a);
+        c = 1 * 2 * 3;
+        console.log("Hasil perkalian : " + c);
+    }
+    function changeText () {
+        const element = document.getElementById("intro");
+        element.innerHTML = "Selamat Datang di TopUpNoLimit.com";
+    }
+    function changeStyle() {
+        const element = document.getElementById("tombol");
+        element.style.color = "red";
+        element.style.background = "yellow";
+    }
+</script>
+
+
+<button class="btn btn-primary" onclick="showme (); changeText();">Show me</button>
+<button class="btn btn-primary" onclick="changeText();">Ganti Text Intro</button>
+<button class="btn btn-primary" onclick="changeStyle();">Ganti Style Intro</button>
 
 <body class="d-flex justify-content-center">
 
